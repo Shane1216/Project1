@@ -1,4 +1,6 @@
-# Overview - Our aim is to create an application that will take 3 APIs (Ticket Master, Weather & Park Whiz) and combine them into one application where users can get the most information and make their plans come together. 
+# Overview - 
+* Our aim is to create an application that will take 3 APIs (Ticket Master, Weather & Park Whiz) and combine them into one application where users can get the most information and make their plans come together. 
+
 
 * Our target audience will range anywhere from locals, tourist, avid event goers etc. Open to all age groups and interests.
 
