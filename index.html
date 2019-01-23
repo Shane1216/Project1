@@ -14,7 +14,8 @@
     <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.1/dist/js/foundation.min.js" integrity="sha256-WUKHnLrIrx8dew//IpSEmPN/NT3DGAEmIePQYIEJLLs= sha384-53StQWuVbn6figscdDC3xV00aYCPEz3srBdV/QGSXw3f19og3Tq2wTRe0vJqRTEO sha512-X9O+2f1ty1rzBJOC8AXBnuNUdyJg0m8xMKmbt9I3Vu/UOWmSg5zG+dtnje4wAZrKtkopz/PEDClHZ1LXx5IeOw==" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/motion-ui@1.2.3/dist/motion-ui.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-    
+    <link rel="stylesheet" href="assets/css/carousel.css">
+
 </head>
 <body>
 <!--Foundation Header--> 
@@ -45,22 +46,30 @@
         <span class="input-group-label">
           <i class="fa fa-search" aria-hidden="true"></i>
         </span>
-        <input class="input-group-field" type="search" placeholder="My Event">
+        <input class="input-group-field" id="name-input" type="search" placeholder="My Event">
       </div>
   
       <div class="input-group">
         <span class="input-group-label">
           <i class="fa fa-map" aria-hidden="true"></i>
         </span>
-        <input class="input-group-field" type="search" placeholder="City">
+        <input class="input-group-field" id="city-input" type="search" placeholder="City">
       </div>
   
       <div class="input-group">
         <span class="input-group-label">
           <i class="fa fa-map"></i>
         </span>
-        <input class="input-group-field" type="search" placeholder="State">
+        <input class="input-group-field" id="state-input" type="search" placeholder="State">
       </div>
+
+      <div class="input-group">
+            <span class="input-group-label">
+              <i class="fa fa-map"></i>
+            </span>
+            <input class="input-group-field" id="country-input" type="search" placeholder="Country">
+          </div>
+
     </div>
     <div class="button-container">
             
@@ -94,8 +103,6 @@
     </tbody>
   </table>
 <br><br>
-<!--php-->   
-<?php include 'app.php';?>
 
 <!--Foundation XY Grid-->
 <div class="grid-x">
@@ -107,7 +114,7 @@
         
       </div>
 <br>
-<!--Foundation Orbit Carousel, requires SCSS?   
+<!--Foundation Orbit Carousel   
 <div class="row">
         <div class="columns">
           <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
@@ -162,18 +169,14 @@
           <a href="https://openweathermap.org/api" class="footer-link">
             <i class="fa fa-cloud"></i> <span class='footer-text'>Open Weather</span>
           </a>
-          <a href="https://developer.gettyimages.com/en/" class="footer-link">
-            <i class="fa fa-photo"></i> <span class='footer-text'>Getty Images</span>
-          </a>
+          
           <a href="https://fonts.google.com/" class="footer-link">
             <i class="fa fa-bold"></i> <span class='footer-text'>Google Fonts</span>
           </a>
       </div>
     
     <div class="mobile-bottom-bar">
-        <a href="https://firebase.google.com/" class="footer-link">
-          <i class="fa fa-database"></i> <span class='footer-text'>Firebase</span>
-        </a>
+        
         <a href="https://www.w3schools.com/html/html5_intro.asp" class="footer-link">
           <i class="fa fa-html5"></i> <span class='footer-text'>HTML5</span>
         </a>
@@ -218,6 +221,6 @@
           });
         });
     </script>
-  
+  <script src="assets/javascript/carousel.js"></script> 
 </body>
 </html>
