@@ -2,14 +2,14 @@
   $("#event-search").on("click", function(event) {
     event.preventDefault();
 
-    let eventName;
+    let eventName = $('#name-input').val().trim();
     let city = $('#city-input').val().trim();
     let state = $('#state-input').val().trim();
-    let country;
+    let country = $('#state-input').val().trim();
     
     
     //Ticketmaster API call to get event name, event type(genre), date and time of event, and venue name
-    let queryURL = 'https://app.ticketmaster.com/discovery/v2/events.response?size=50&city=' + city + '&state=' + state + '&apikey=o21rB514w7SKdPN63jRqUSSzt0UurSAa';
+    let queryURL = 'https://app.ticketmaster.com/discovery/v2/events.response?size=20&city=' + city + '&state=' + state + '&keyword=' + eventName + '&country=' + country + '&apikey=o21rB514w7SKdPN63jRqUSSzt0UurSAa';
     $.ajax({
       url: queryURL,
       method: 'GET'
@@ -33,7 +33,7 @@
     })
     //Openweather API call to get city name, temperature, and weather condition
     $.ajax({
-      url: 'https://api.openweathermap.org/data/2.5/weather?q=Athens,us&appid=166a433c57516f51dfab1f7edaed8413',
+      url: 'https://api.openweathermap.org/data/2.5/weather?q=' + city + ',' + country + 'us&appid=166a433c57516f51dfab1f7edaed8413',
       method: 'GET'
     }).then(function(response){
       console.log(response);
