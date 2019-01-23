@@ -1,0 +1,342 @@
+/*Foundation Header Option*/
+
+body {
+  font-family: 'Open Sans', sans-serif;
+ }
+
+.marketing-site-hero {
+  background: url("https://mobile-atom.com/wp-content/uploads/2019/01/Computer-Background.jpg") top right no-repeat;
+  height: 100vh;
+  background-size: cover;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 10px solid #1779ba;
+}
+
+@media screen and (min-width: 40em) {
+  .marketing-site-hero {
+    background-position: center center;
+  }
+}
+
+.marketing-site-hero-content {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.marketing-site-hero-content h1 {
+  font-size: 32px;
+}
+
+.marketing-site-hero-content p {
+  font-size: 18px;
+  text-align: justify;
+}
+
+.marketing-site-hero-content .button.round {
+  border-radius: 5000px;
+  text-transform: uppercase;
+  font-size: 22px;
+  margin-bottom: 0;
+  width: 260px;
+  height: 60px;
+  position: absolute;
+  left: 50%;
+  margin-left: -135px;
+}
+
+.marketing-site-hero-content .button.round:hover {
+  background-color: goldenrod;
+  border-radius: 5000px;
+  text-transform: uppercase;
+  font-size: 22px;
+  margin-bottom: 0;
+  width: 260px;
+  height: 60px;
+  position: absolute;
+  left: 50%;
+  margin-left: -135px;
+}
+
+@media screen and (min-width: 40em) {
+  .marketing-site-hero-content {
+    
+  }
+}
+
+.heading1Text {
+  margin-top: 80px;
+}
+
+
+/*Foundation Responsive Form*/
+form {
+  border-bottom: 10px solid #1779ba;
+}
+ 
+form .form-icons {
+    text-align: center;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  
+  form .form-icons h4 {
+    margin-bottom: 1rem;
+  }
+  
+  form .form-icons .input-group-label {
+    background-color: #1779ba;
+    border-color: #1779ba;
+  }
+  
+  form .form-icons .input-group-field {
+    border-color: #1779ba;
+  }
+  
+  form .form-icons .fa {
+    color: white;
+    width: 1rem;
+  }
+
+  .button-container {
+    text-align: center;
+  }
+
+  form .button {
+    color: white;
+    font-size: 22px;
+    width: 260px;
+    height: 60px;
+    margin: 0 auto;
+    border-radius: 5000px;
+    text-transform: uppercase;
+   
+  }
+    
+  form .button:hover { 
+    background-color: goldenrod;
+    color: #1779ba;
+    width: 260px;
+    height: 60px;
+    margin: 0 auto;
+    border-radius: 5000px;
+    text-transform: uppercase; 
+  }
+
+/*Foundation Responsive Table CSS*/ 
+
+
+.responsive-card-table {
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    
+  }
+  
+  .responsive-card-table.unstriped tbody {
+    background-color: transparent;
+  }
+  
+  .responsive-card-table th {
+    background-color: #e6e6e6;
+  }
+  
+  .responsive-card-table tr,
+  .responsive-card-table th,
+  .responsive-card-table td {
+    border: 1px solid #0a0a0a;
+  }
+  
+  @media screen and (max-width: 640px) {
+    .responsive-card-table {
+      
+    }
+    .responsive-card-table thead tr {
+      position: absolute;
+      top: -9999em;
+      left: -9999em;
+    }
+    .responsive-card-table tr {
+      border: 1px solid #0a0a0a;
+      display: block;
+    }
+    .responsive-card-table tr + tr {
+      margin-top: 1.5rem;
+    }
+    .responsive-card-table td {
+      border: none;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-justify-content: flex-start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      border-bottom: 1px solid #0a0a0a;
+      padding-left: 50%;
+      position: relative;
+    }
+    .responsive-card-table td:before {
+      content: attr(data-label);
+      display: inline-block;
+      font-weight: bold;
+      line-height: 1.5;
+      margin-left: -100%;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+    }
+    .responsive-card-table td:after {
+      content: '';
+      position: absolute;
+      background: #e6e6e6;
+      width: 45%;
+      height: 95%;
+      left: 1px;
+      top: 1px;
+      z-index: 0;
+    }
+  }
+
+/*Foundation Section*/
+
+.foundation {
+  text-align: justify;
+  font-size: 18px;
+  margin-left: 60px;
+}
+
+.yeti {
+  text-align: center;
+  
+}
+
+/*Foundation JS Carousel*/
+
+
+/* Demo Styles 
+body {
+  padding: 2rem 1rem;
+}
+.docs-example-orbit-slide {
+  padding: 2rem 4rem;
+  color: #fefefe;
+}
+.orbit-slide:nth-of-type(1) .docs-example-orbit-slide {
+  background: dodgerblue;
+}
+.orbit-slide:nth-of-type(2) .docs-example-orbit-slide {
+  background: rebeccapurple;
+}
+.orbit-slide:nth-of-type(3) .docs-example-orbit-slide {
+  background: darkgoldenrod;
+}
+.orbit-slide:nth-of-type(4) .docs-example-orbit-slide {
+  background: lightseagreen;
+}
+*/
+
+/*top button*/
+
+  .topButton {
+  font-size: 32px;
+  border-radius: 5000px;
+  color: white;
+  background-color: #1779ba;
+  text-transform: uppercase;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 50%;
+  margin-left: -25px;
+}
+
+.topButton:hover {
+  font-size: 32px;
+  border-radius: 5000px;
+  color: white;
+  background-color: goldenrod;
+  text-transform: uppercase;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 50%;
+  margin-left: -25px;
+}
+
+/*Foundation responsive footer*/
+
+.mobile-bottom-bar {
+  width: 100%;
+  height: 3.778rem;
+  background: #1779ba;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mobile-bottom-bar .footer-link {
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  font-weight: bold;
+  padding: 0.907rem 1rem;
+}
+
+.mobile-bottom-bar .footer-link i.fa {
+  opacity: 0.8;
+  margin-right: 0.625rem;
+  font-size: 1.5rem;
+  vertical-align: middle;
+}
+
+.mobile-bottom-bar .footer-link:focus, .mobile-bottom-bar .footer-link:active {
+  color: #0c3e5f;
+}
+
+.mobile-bottom-bar .footer-text {
+  position: relative;
+  top: 2px;
+  font-weight: bold;
+  font-size: 0.7rem;
+  color: black;
+}
+
+.footerTitle {
+  position: relative;
+  top: 2px;
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+}
+
+.footerCopyright {
+  position: relative;
+  top: 2px;
+  font-weight: normal;
+  font-size: 0.9rem;
+  color: black;
+}
