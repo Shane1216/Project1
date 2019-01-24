@@ -4,52 +4,214 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <title>Event Finder</title>
+
+    <title>Entertainment Event App</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">  
+    <!-- Compressed CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.1/dist/css/foundation.min.css" integrity="sha256-1mcRjtAxlSjp6XJBgrBeeCORfBp/ppyX4tsvpQVCcpA= sha384-b5S5X654rX3Wo6z5/hnQ4GBmKuIJKMPwrJXn52ypjztlnDK2w9+9hSMBz/asy9Gw sha512-M1VveR2JGzpgWHb0elGqPTltHK3xbvu3Brgjfg4cg5ZNtyyApxw/45yHYsZ/rCVbfoO5MSZxB241wWq642jLtA==" crossorigin="anonymous">
+    <!-- Compressed JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.1/dist/js/foundation.min.js" integrity="sha256-WUKHnLrIrx8dew//IpSEmPN/NT3DGAEmIePQYIEJLLs= sha384-53StQWuVbn6figscdDC3xV00aYCPEz3srBdV/QGSXw3f19og3Tq2wTRe0vJqRTEO sha512-X9O+2f1ty1rzBJOC8AXBnuNUdyJg0m8xMKmbt9I3Vu/UOWmSg5zG+dtnje4wAZrKtkopz/PEDClHZ1LXx5IeOw==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/motion-ui@1.2.3/dist/motion-ui.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/carousel.css">
+ 
+
+
 </head>
 <body>
-    <div class="container">
+<!--Foundation Header--> 
 
-        <div class="jumbotron" style="background-color: black; color: gold">
-          <h1 class="text-center">Event Finder</h1>
-        </div>
-    
-        <div class="row">
-          <div class="col-md-12">
-            <div class="card mb-4">
-              <div class="card-header">Event Search</div>
-              <div class="card-body">
-    
-                <form>
-                  <div class="form-group">
-                      <label for="location-input">Event Name</label>
-                      <input class="form-control" id="name-input" placeholder="Event Name" type="text">
-                      <label for="location-input">City</label>
-                    <input class="form-control" id="city-input" placeholder="City" type="text">
-                    <label for="location-input">State</label>
-                    <input class="form-control" id="state-input" placeholder="State" type="text">
-                    <label for="location-input">Country</label>
-                    <input class="form-control" id="country-input" placeholder="Country Code" type="text">
-                  <button class="btn btn-primary float-right" id="event-search">Submit</button>
-                </form>
-    
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div id="weather-div"></div>
-        <div id="venue-div"></div>
-        
-       
+<div class="marketing-site-hero" id="top">
+  
+        <div class="marketing-site-hero-content">
+        <br><br>
+          <h1 class="heading1Text"></h1>
+        <br>
+            
+         <p class="subheader"></p>
+          
+          <br>   
+          <a href="#jump" class="round button">Get started</a>
+          
+        </div>
+      </div> 
+     
+<!--Foundation Form-->
+<form>
     
+    <div class="form-icons">
+            
+      <h4 id="jump">What type of event are you looking for?</h4>
+  
+      <div class="input-group">
+        <span class="input-group-label">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </span>
+        <input id="name-input" class="input-group-field"  type="search" placeholder="My Event">
+      </div>
+  
+      <div class="input-group">
+        <span class="input-group-label">
+          <i class="fa fa-map" aria-hidden="true"></i>
+        </span>
+        <input id="city-input" class="input-group-field"  type="search" placeholder="City">
+      </div>
+  
+      <div class="input-group">
+        <span class="input-group-label">
+          <i class="fa fa-map"></i>
+        </span>
+        <input id="state-input" class="input-group-field"  type="search" placeholder="State">
       </div>
 
-      
+      <div class="input-group">
+            <span class="input-group-label">
+              <i class="fa fa-map"></i>
+            </span>
+            <input id="country-input" class="input-group-field"  type="search" placeholder="Country">
+          </div>
+
+    </div>
+    <div class="button-container">
+            
+    <button class="button" id='event-search'>Find my event!</button>
+    </div>
+    <br><br><br><br>
+  </form>
+
+<br><br>
   
-      
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-      <script src="Javascript/logic.js"></script>
+  <div id="pw-div"></div>
+  <div id="weather-div"></div>
+  <div id="venue-div"></div>
+ 
+  
+<br><br>
+
+<!--Foundation XY Grid-->
+<div class="grid-x">
+        <div class="cell large-auto"><p class="foundation"><strong>Dont' Miss Out on the Next Event</strong>. <br>
+        <br> The one stop shop for events. Know all the events taking place in your town. Plan ahead and get the best deals<br> 
+        <br> </p></div>
+       
+        <div class="cell large-auto"><a href="https://foundation.zurb.com/"><p class="yeti"><img src="assets/images/soccer7.jpg" alt="venue" style="width:450px;height:330px;">
+        </p></a></div>
+        
+      </div>
+<br>
+<!--Foundation Orbit Carousel   
+<div class="row">
+        <div class="columns">
+          <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
+            <ul class="orbit-container">
+              <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+              <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+              <li class="orbit-slide">
+                <img class="orbit-image" src="assets/images/zurb-foundation.png" alt="Space">
+                <figcaption class="orbit-caption">Foundation Framework</figcaption>
+              </li>
+              <li class="is-active orbit-slide">
+                <img class="orbit-image" src="assets/images/zurb-yeti.png" alt="Space">
+                <figcaption class="orbit-caption">Foundation for sites</figcaption>
+              </li>
+              <li class="orbit-slide">
+                <img class="orbit-image" src="assets/images/apps-yeti.svg" alt="Space">
+                <figcaption class="orbit-caption">Foundation for apps</figcaption>
+              </li>
+              <li class="orbit-slide">
+                <img class="orbit-image" src="assets/images/inky-email.svg" alt="Space">
+                <figcaption class="orbit-caption">Foundation for email</figcaption>
+              </li>
+            </ul>
+            <nav class="orbit-bullets">
+              <button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span></button>
+              <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
+              <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
+              <button data-slide="3"><span class="show-for-sr">Fourth slide details.</span></button>
+            </nav>
+          </div>
+        </div>
+      </div>
+-->     
+<br>   
+<a href="#top" class="topButton">
+    <div><p>⬆︎</p></div></a>
+<br><br>
+
+<br><br>
+<footer>
+    
+    <div class="mobile-bottom-bar">
+        <p class="footerTitle">This web application was made with:</p>
+    </div>
+    <div class="mobile-bottom-bar">
+        <a href="https://developer.ticketmaster.com/" class="footer-link">
+            <i class="fa fa-ticket"></i> <span class='footer-text'>Ticket Master</span>
+          </a>
+        <a href="http://www.parkwhiz.com/developers/" class="footer-link">
+            <i class="fa fa-car"></i> <span class='footer-text'>Parking Whiz</span>
+          </a>
+          <a href="https://openweathermap.org/api" class="footer-link">
+            <i class="fa fa-cloud"></i> <span class='footer-text'>Open Weather</span>
+          </a>
+          
+          <a href="https://fonts.google.com/" class="footer-link">
+            <i class="fa fa-bold"></i> <span class='footer-text'>Google Fonts</span>
+          </a>
+      </div>
+    
+    <div class="mobile-bottom-bar">
+        
+        <a href="https://www.w3schools.com/html/html5_intro.asp" class="footer-link">
+          <i class="fa fa-html5"></i> <span class='footer-text'>HTML5</span>
+        </a>
+        <a href="https://www.javascript.com/" class="footer-link">
+            <i class="fa fa-wrench"></i> <span class='footer-text'>Javascript</span>
+          </a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3#" class="footer-link">
+            <i class="fa fa-css3"></i> <span class='footer-text'>CSS3</span>
+          </a>
+        <a href="https://github.com/" class="footer-link">
+            <i class="fa fa-github"></i> <span class='footer-text'>Github</span>
+        </a>
+      </div>
+      <div class="mobile-bottom-bar">
+            <p class="footerCopyright">Copyright 2019: UCF Fall 19 Bootcamp Group 3</p>
+        </div>
+</footer>
+
+  <script>
+        $(document).ready(function(){
+          // Add smooth scrolling to all links
+          $("a").on('click', function(event) {
+        
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+        
+              // Store hash
+              var hash = this.hash;
+        
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 800, function(){
+           
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              });
+            } // End if
+          });
+        });
+    </script>
+  <script src="assets/javascript/carousel.js"></script> 
+  <script src="Javascript/logic.js"></script>
 </body>
 </html>

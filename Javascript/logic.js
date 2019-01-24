@@ -43,6 +43,23 @@
 
       $('#weather-div').append(name, temp, condition);
     })
+
+    //Parking whiz api key 25806fb1af4b9b6fe2518cce0470c0218664f834
+
+    let pwQuery = 'http://api.parkwhiz.com/parking/reservation/?key=25806fb1af4b9b6fe2518cce0470c0218664f834';
+
+    $.ajax({
+      url: pwQuery,
+      method: 'GET'
+    }).then(function(response){
+      console.log(response);
+
+      let pwUrl = $("<a>").attr('href', response[0].parkwhiz_url).text('See parking near you')
+
+      $('#pw-div').append(pwUrl);
+    })
+
+    
   });
   
 
