@@ -2,6 +2,7 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
+  
  }
 
 .marketing-site-hero {
@@ -77,7 +78,7 @@ body {
 
 /*Foundation Responsive Form*/
 form {
-  border-bottom: 10px solid #1779ba;
+ 
 }
  
 form .form-icons {
@@ -131,90 +132,96 @@ form .form-icons {
     text-transform: uppercase; 
   }
 
-/*Foundation Responsive Table CSS*/ 
+  /*Results from APIs*/
 
+  .apiEvent {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 22px;
+  }
 
-.responsive-card-table {
-    border-collapse: collapse;
-    margin-top: 20px;
-    margin-left: 40px;
-    margin-right: 40px;
-    
+  .apiParking {
+    text-align: center;
+    font-size: 22px;
   }
-  
-  .responsive-card-table.unstriped tbody {
-    background-color: transparent;
+
+  .apiWeather {
+    text-align: center;
+    font-size: 22px;
   }
-  
-  .responsive-card-table th {
-    background-color: #e6e6e6;
+
+  #venue-div {
+    margin-left: 60px;
   }
-  
-  .responsive-card-table tr,
-  .responsive-card-table th,
-  .responsive-card-table td {
-    border: 1px solid #0a0a0a;
+
+  #pw-div {
+    margin-left: 60px;
   }
-  
-  @media screen and (max-width: 640px) {
-    .responsive-card-table {
-      
-    }
-    .responsive-card-table thead tr {
-      position: absolute;
-      top: -9999em;
-      left: -9999em;
-    }
-    .responsive-card-table tr {
-      border: 1px solid #0a0a0a;
-      display: block;
-    }
-    .responsive-card-table tr + tr {
-      margin-top: 1.5rem;
-    }
-    .responsive-card-table td {
-      border: none;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-justify-content: flex-start;
-          -ms-flex-pack: start;
-              justify-content: flex-start;
-      -webkit-align-items: center;
-          -ms-flex-align: center;
-              align-items: center;
-      border-bottom: 1px solid #0a0a0a;
-      padding-left: 50%;
-      position: relative;
-    }
-    .responsive-card-table td:before {
-      content: attr(data-label);
-      display: inline-block;
-      font-weight: bold;
-      line-height: 1.5;
-      margin-left: -100%;
-      width: 100%;
-      position: relative;
-      z-index: 1;
-    }
-    .responsive-card-table td:after {
-      content: '';
-      position: absolute;
-      background: #e6e6e6;
-      width: 45%;
-      height: 95%;
-      left: 1px;
-      top: 1px;
-      z-index: 0;
-    }
+
+  #weather-div {
+    margin-left: 60px;
   }
+
+  img {
+    display: block;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    width: 450px;
+  }
+
+  a {
+    font-size: 32px;
+    text-indent: 20px;
+  }
+
+  a:hover {
+    font-size: 32px;
+    text-indent: 20px;
+    color: goldenrod;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 24px;
+    text-indent: 20px;
+  }
+
+  h4 {
+    font-size: 20px;
+    text-indent: 20px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+
+/*rides*/
+#rides {
+  text-align: center;
+}
 
 /*Foundation Section*/
+
+.bottomHR {
+  border-top: 10px solid #1779ba;
+  color: transparent;
+}
 
 .foundation {
   text-align: justify;
   font-size: 18px;
   margin-left: 60px;
+  margin-right: 60px;
+  
 }
 
 .yeti {
@@ -222,30 +229,105 @@ form .form-icons {
   
 }
 
-/*Foundation JS Carousel*/
+/*Foundation Slider*/                   
 
-
-/* Demo Styles 
-body {
-  padding: 2rem 1rem;
-}
-.docs-example-orbit-slide {
-  padding: 2rem 4rem;
-  color: #fefefe;
-}
-.orbit-slide:nth-of-type(1) .docs-example-orbit-slide {
-  background: dodgerblue;
-}
-.orbit-slide:nth-of-type(2) .docs-example-orbit-slide {
-  background: rebeccapurple;
-}
-.orbit-slide:nth-of-type(3) .docs-example-orbit-slide {
-  background: darkgoldenrod;
-}
-.orbit-slide:nth-of-type(4) .docs-example-orbit-slide {
-  background: lightseagreen;
-}
-*/
+* {box-sizing: border-box}
+                    .mySlides {display: none}
+                    img {vertical-align: middle;}
+                    
+                    /* Slideshow container */
+                    .slideshow-container {
+                      max-width: 300px;
+                      
+                      position: relative;
+                      margin: auto;
+                      text-align: center;
+                    }
+                    
+                    /* Next & previous buttons */
+                    .prev, .next {
+                      cursor: pointer;
+                      position: absolute;
+                      top: 0%;
+                      width: auto;
+                      padding: 16px;
+                      margin-top: -22px;
+                      color: #1779ba;
+                      font-weight: bold;
+                      font-size: 48px;
+                      transition: 0.6s ease;
+                      border-radius: 0 3px 3px 0;
+                      user-select: none;
+                    }
+                    
+                    /* Position the "next button" to the right */
+                    .next {
+                      right: 0%;
+                      border-radius: 3px 0 0 3px;
+                    }
+                    
+                    /* On hover, add a black background color with a little bit see-through */
+                    .prev:hover, .next:hover {
+                      background-color: goldenrod;
+                    }
+                    
+                    /* Caption text */
+                    .text {
+                      color: #1779ba;
+                      font-size: 22px;
+                      padding: 8px 12px;
+                      
+                      width: 100%;
+                      text-align: center;
+                    }
+                    
+                    /* Number text (1/3 etc) */
+                    .numbertext {
+                      color: #1779ba;
+                      font-size: 12px;
+                      padding: 8px 12px;
+                      position: absolute;
+                      top: 0;
+                    }
+                    
+                    /* The dots/bullets/indicators */
+                    .dot {
+                      cursor: pointer;
+                      height: 15px;
+                      width: 15px;
+                      margin: 0 2px;
+                      background-color: transparent;
+                      border-radius: 50%;
+                      display: inline-block;
+                      transition: background-color 0.6s ease;
+                    }
+                    
+                    .active, .dot:hover {
+                      background-color: transparent;
+                    }
+                    
+                    /* Fading animation */
+                    .fade {
+                      -webkit-animation-name: fade;
+                      -webkit-animation-duration: 1.5s;
+                      animation-name: fade;
+                      animation-duration: 1.5s;
+                    }
+                    
+                    @-webkit-keyframes fade {
+                      from {opacity: .4} 
+                      to {opacity: 1}
+                    }
+                    
+                    @keyframes fade {
+                      from {opacity: .4} 
+                      to {opacity: 1}
+                    }
+                    
+                    /* On smaller screens, decrease text size */
+                    @media only screen and (max-width: 300px) {
+                      .prev, .next,.text {font-size: 11px}
+                    }
 
 /*top button*/
 
@@ -254,7 +336,7 @@ body {
   border-radius: 5000px;
   color: white;
   background-color: #1779ba;
-  text-transform: uppercase;
+  text-indent: 0px;
   text-align: center;
   width: 50px;
   height: 50px;
@@ -268,7 +350,7 @@ body {
   border-radius: 5000px;
   color: white;
   background-color: goldenrod;
-  text-transform: uppercase;
+  text-indent: 0px;
   text-align: center;
   width: 50px;
   height: 50px;
