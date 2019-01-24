@@ -7,7 +7,7 @@ $(document).ready(function(){
     let city = $('#city-input').val().trim();
     let state = $('#state-input').val().trim();
     let country = $('#state-input').val().trim();
-    
+
     
     //Ticketmaster API call to get event name, event type(genre), date and time of event, and venue name
     let queryURL = 'https://app.ticketmaster.com/discovery/v2/events.response?size=20&city=' + city + '&state=' + state + '&keyword=' + eventName + '&country=' + country + '&apikey=o21rB514w7SKdPN63jRqUSSzt0UurSAa';
@@ -29,39 +29,46 @@ $(document).ready(function(){
         let venue = $('<h5>').text('Venue: ' + response._embedded.events[events]._embedded.venues[0].name);
 
         $('#venue-div').append(image, eventName, genre, date, time, tickets, venue);
-      }
-      
         
+      }
+      let lat = (response._embedded.events[0]._embedded.venues[0].location.latitude);
+        let long = (response._embedded.events[0]._embedded.venues[0].location.longitude);
+      console.log(lat);
+        console.log(long);
+
+        let pwQuery = 'http://api.parkwhiz.com/venue/search/?lat=' + lat + '&' + 'lng=' + long + '&key=25806fb1af4b9b6fe2518cce0470c0218664f834';
+      console.log(pwQuery);
+        $.ajax({
+          url: pwQuery,
+          method: 'GET'
+        }).then(function(response){
+          console.log(response);
+    
+          let pwUrl = $("<a target = _blank>").attr('href', response.parkwhiz_url).text('See parking near you')
+    
+          $('#pw-div').append(pwUrl);
+        })
+
     })
+    
     //Openweather API call to get city name, temperature, and weather condition
     $.ajax({
-      url: 'https://api.openweathermap.org/data/2.5/weather?q=' + city + ',' + country + 'us&appid=166a433c57516f51dfab1f7edaed8413',
+      url: 'https://api.openweathermap.org/data/2.5/weather?q=' + city + ',' + country + '&appid=166a433c57516f51dfab1f7edaed8413',
       method: 'GET'
     }).then(function(response){
       console.log(response);
+
       let temp = 1.8*(response.main.temp - 273) + 32;
       let name = $('<h2>').text(response.name);
-      let farenheit = $('<h4>').text(temp.toFixed(0) + 'F');
+      let farenheit = $('<h4>').text(temp.toFixed(0) + 'F°');
       let condition = $('<h4>').text('Outlook: ' + response.weather[0].main);
 
       $('#weather-div').append(name, farenheit, condition);
     })
 
-    //Parking whiz api key 25806fb1af4b9b6fe2518cce0470c0218664f834
+    //API call for nearby parking info
 
-    let pwQuery = 'http://api.parkwhiz.com/parking/reservation/?key=25806fb1af4b9b6fe2518cce0470c0218664f834';
-
-    $.ajax({
-      url: pwQuery,
-      method: 'GET'
-    }).then(function(response){
-      console.log(response);
-
-      let pwUrl = $("<a>").attr('href', response[0].parkwhiz_url).text('See nearby parking!')
-      pwUrl.attr("target", "_blank")
-
-      $('#pw-div').append(pwUrl);
-    })
+    clearFunction();
 
     }); 
 
@@ -89,6 +96,16 @@ $(document).ready(function(){
       });
     } // End if
   });
+
+  });
+  //Function to clear the divs of info so that new searches can be populated in their place
+  let clearFunction = function(){
+    $('#weather-div').empty();
+    $('#pw-div').empty();
+    $('#venue-div').empty();
+  }
+  
+
 
 
   /*Foundation Section Slider
