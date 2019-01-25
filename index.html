@@ -4,52 +4,230 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <title>Event Finder</title>
+
+    <title>Entertainment Event App</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">  
+    <!-- Foundation Compressed CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.1/dist/css/foundation.min.css" integrity="sha256-1mcRjtAxlSjp6XJBgrBeeCORfBp/ppyX4tsvpQVCcpA= sha384-b5S5X654rX3Wo6z5/hnQ4GBmKuIJKMPwrJXn52ypjztlnDK2w9+9hSMBz/asy9Gw sha512-M1VveR2JGzpgWHb0elGqPTltHK3xbvu3Brgjfg4cg5ZNtyyApxw/45yHYsZ/rCVbfoO5MSZxB241wWq642jLtA==" crossorigin="anonymous">
+    <!-- Foundation Compressed JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.1/dist/js/foundation.min.js" integrity="sha256-WUKHnLrIrx8dew//IpSEmPN/NT3DGAEmIePQYIEJLLs= sha384-53StQWuVbn6figscdDC3xV00aYCPEz3srBdV/QGSXw3f19og3Tq2wTRe0vJqRTEO sha512-X9O+2f1ty1rzBJOC8AXBnuNUdyJg0m8xMKmbt9I3Vu/UOWmSg5zG+dtnje4wAZrKtkopz/PEDClHZ1LXx5IeOw==" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
 </head>
 <body>
-    <div class="container">
+<!--Foundation Header--> 
 
-        <div class="jumbotron" style="background-color: black; color: gold">
-          <h1 class="text-center">Event Finder</h1>
-        </div>
-    
-        <div class="row">
-          <div class="col-md-12">
-            <div class="card mb-4">
-              <div class="card-header">Event Search</div>
-              <div class="card-body">
-    
-                <form>
-                  <div class="form-group">
-                      <label for="location-input">Event Name</label>
-                      <input class="form-control" id="name-input" placeholder="Event Name" type="text">
-                      <label for="location-input">City</label>
-                    <input class="form-control" id="city-input" placeholder="City" type="text">
-                    <label for="location-input">State</label>
-                    <input class="form-control" id="state-input" placeholder="State" type="text">
-                    <label for="location-input">Country</label>
-                    <input class="form-control" id="country-input" placeholder="Country Code" type="text">
-                  <button class="btn btn-primary float-right" id="event-search">Submit</button>
-                </form>
-    
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div id="weather-div"></div>
-        <div id="venue-div"></div>
+<div class="marketing-site-hero" id="top">
+  
+        <div class="marketing-site-hero-content">
         
-       
+          <h1 class="heading1Text"></h1>
+        
+            
+         <p class="subheader"></p>
+          
+           
+          <a href="#jump" class="round button">Get started</a>
+          
+        </div>
+      </div> 
+     
+<!--Foundation Form-->
+<form>
     
+    <div class="form-icons">
+            
+      <h4 id="jump">What type of event are you looking for?</h4>
+  
+      <div class="input-group">
+        <span class="input-group-label">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </span>
+        <input id="name-input" class="input-group-field"  type="search" placeholder="*My Event">
+      </div>
+  
+      <div class="input-group">
+        <span class="input-group-label">
+          <i class="fa fa-map" aria-hidden="true"></i>
+        </span>
+        <input id="city-input" class="input-group-field"  type="search" placeholder="*City" required pattern="A-Za-z">
+      </div>
+  
+      <div class="input-group">
+        <span class="input-group-label">
+          <i class="fa fa-map"></i>
+        </span>
+        <input id="state-input" class="input-group-field"  type="search" placeholder="*State" required pattern="A-Za-z">
       </div>
 
-      
+      <div class="input-group">
+            <span class="input-group-label">
+              <i class="fa fa-map"></i>
+            </span>
+            <input id="country-input" class="input-group-field"  type="search" placeholder="Country" required pattern="A-Za-z">
+          </div>
+
+    </div>
+    <div class="button-container">
+          
+    <button class="button" id='event-search'>Find my event!</button>
+    </div>
+    
+  </form>
+
+<p class="apiEvent">Your Event(s)</p>
+  <hr>
+
+  <div id="venue-div"></div>
+
+<p class="apiParking">Nearby Parking</p>
+<hr>
+
+  <div id="pw-div"></div>
+
+<p class="apiWeather">The Weather</p>
+
+
+  <div id="weather-div"></div>
   
+
+<hr class="bottomHR">
+
+
+<!--Uber and lift-->
+<h1>Hail a ride</h1>
+<div class="grid-x">
+        <div class="cell large-auto"><p class="foundation"></div>
+     
+        <div class="cell large-auto" id="rides"><p><a href="https://account.lyft.com/auth?v=ride&next=https%3A%2F%2Fride.lyft.com%2Fu%3Fid%3Dlyft%26partner%3DYOUR_CLIENT_IDl" target="blank"><img src="assets/images/lyft.png" alt="Lyft" style="width:100px;"></a>&nbsp &nbsp &nbsp &nbsp &nbsp<a href="https://m.uber.com/looking" target="blank"><img src="assets/images/uber.png" alt="Uber" style="width:100px;"></a>&nbsp &nbsp &nbsp &nbsp &nbsp<a href="https://services.taxihail.com/MearsTaxi/" target="blank"><img src="assets/images/mears.png" alt="mears" style="width:100px;"></p></a></div>
       
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-      <script src="Javascript/logic.js"></script>
+        <div class="cell large-auto"><p class="foundation"></div>
+</div>
+
+
+<hr class="bottomHR">
+
+ <!--Foundation XY Grid-->
+<div class="grid-x"> 
+  <div class="cell large-auto"><p class="foundation"><strong>Dont' Miss Out on the Next Big Event!</strong> </p>
+        <p class="foundation">This web application is your one stop shop for important information. Research the ticketable events taking place near you or for an upcoming trip. Whether it's a game or concert get the details you need. Plan ahead for a fun worry free time.
+        </p></div>
+       
+        <div class="cell large-auto"><a href="https://foundation.zurb.com/"><p class="yeti"><img src="assets/images/soccer7.jpg" alt="venue" style="width:450px;height:330px;">
+        </p></a></div>
+</div>
+
+<hr class="bottomHR">
+
+<!--Foundation XY Grid-->
+<div class="grid-x">
+                   
+                   
+
+        <div class="cell large-auto"><p class="foundation"><img src="assets/images/zurb-foundation.png" alt="Zurb Foundation"></p></div>
+        
+        <div class="cell large-auto">       
+        <p class="foundation"><strong>This web app is styled with Foundation by Zurb</strong> </p>
+        <p class="foundation">A framework for any device, medium, and accessibility, Foundation is a family of responsive front-end frameworks that make it easy to design beautiful responsive websites, apps and emails that look amazing on any device.</p> 
+        <p class="foundation">Foundation is semantic, readable, flexible, and completely customizable. The Yeti, Snowman, and Squid are constantly adding new resources and code snippets to help get you started! ;)</p></div>
+        
+        <div class="cell large-auto"><!-- Slideshow container --> 
+                    
+                    <div class="slideshow-container">
+                    
+                    <div class="mySlides fade">
+                      
+                      <a href="https://foundation.zurb.com/sites.html" target="blank"><img src="assets/images/zurb-yeti-computer.png" style="width:100%"></a>
+                      <div class="text">Foundation for sites</div>                      
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      
+                      <a href="https://foundation.zurb.com/apps.html" target="blank"><img src="assets/images/apps-yeti-computer.png" style="width:100%"></a>
+                      <div class="text">Foundation for apps</div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      
+                      <a href="https://foundation.zurb.com/emails.html" target="blank"><img src="assets/images/inky-computer.svg" style="width:100%"></a>
+                      <div class="text">Foundation for email</div>
+                    </div>
+                    
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    
+                    </div>
+                    
+                    
+                    <div style="text-align:center">
+                      <span class="dot" onclick="currentSlide(1)"></span> 
+                      <span class="dot" onclick="currentSlide(2)"></span> 
+                      <span class="dot" onclick="currentSlide(3)"></span> 
+                    </div>
+                
+        </div>
+        
+</div>
+
+
+<a href="#top" class="topButton">
+    <div><p class="fa fa-arrow-up"></p></div></a>
+
+<footer>
+    
+    <div class="mobile-bottom-bar">
+        <p class="footerTitle">This web application was made with:</p>
+    </div>
+    <div class="mobile-bottom-bar">
+        <a href="https://developer.ticketmaster.com/" class="footer-link">
+            <i class="fa fa-ticket"></i> <span class='footer-text'>Ticket Master</span>
+          </a>
+        <a href="http://www.parkwhiz.com/developers/" class="footer-link">
+            <i class="fa fa-car"></i> <span class='footer-text'>Parking Whiz</span>
+          </a>
+          <a href="https://openweathermap.org/api" class="footer-link">
+            <i class="fa fa-cloud"></i> <span class='footer-text'>Open Weather</span>
+          </a>
+          
+          <a href="https://fonts.google.com/" class="footer-link">
+            <i class="fa fa-bold"></i> <span class='footer-text'>Google Fonts</span>
+          </a>
+      </div>
+
+    <div class="mobile-bottom-bar">
+      <a href="https://github.com/" class="footer-link">
+        <i class="fa fa-github"></i> <span class='footer-text'>Github</span>
+        </a>
+    </div>
+    
+    <div class="mobile-bottom-bar">
+        
+        <a href="https://www.w3schools.com/html/html5_intro.asp" class="footer-link">
+          <i class="fa fa-html5"></i> <span class='footer-text'>HTML5</span>
+        </a>
+        <a href="https://www.javascript.com/" class="footer-link">
+            <i class="fa fa-wrench"></i> <span class='footer-text'>Javascript</span>
+          </a>
+          <a href="https://learn.jquery.com/" class="footer-link">
+            <i class="fa fa-dollar"></i> <span class='footer-text'>jQuery</span>
+          </a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3#" class="footer-link">
+            <i class="fa fa-css3"></i> <span class='footer-text'>CSS3</span>
+          </a>
+        
+      </div>
+      <div class="mobile-bottom-bar">
+            <p class="footerCopyright">Copyright 2019: UCF Fall 19 Bootcamp Group 3</p>
+        </div>
+</footer>
+
+<script src="Javascript/logic.js"></script>
+
+
 </body>
 </html>
