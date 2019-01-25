@@ -11,15 +11,11 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">  
-    <!-- Compressed CSS -->
+    <!-- Foundation Compressed CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.1/dist/css/foundation.min.css" integrity="sha256-1mcRjtAxlSjp6XJBgrBeeCORfBp/ppyX4tsvpQVCcpA= sha384-b5S5X654rX3Wo6z5/hnQ4GBmKuIJKMPwrJXn52ypjztlnDK2w9+9hSMBz/asy9Gw sha512-M1VveR2JGzpgWHb0elGqPTltHK3xbvu3Brgjfg4cg5ZNtyyApxw/45yHYsZ/rCVbfoO5MSZxB241wWq642jLtA==" crossorigin="anonymous">
-    <!-- Compressed JavaScript -->
+    <!-- Foundation Compressed JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.1/dist/js/foundation.min.js" integrity="sha256-WUKHnLrIrx8dew//IpSEmPN/NT3DGAEmIePQYIEJLLs= sha384-53StQWuVbn6figscdDC3xV00aYCPEz3srBdV/QGSXw3f19og3Tq2wTRe0vJqRTEO sha512-X9O+2f1ty1rzBJOC8AXBnuNUdyJg0m8xMKmbt9I3Vu/UOWmSg5zG+dtnje4wAZrKtkopz/PEDClHZ1LXx5IeOw==" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/motion-ui@1.2.3/dist/motion-ui.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/carousel.css">
- 
-
 
 </head>
 <body>
@@ -59,21 +55,21 @@
         <span class="input-group-label">
           <i class="fa fa-map" aria-hidden="true"></i>
         </span>
-        <input id="city-input" class="input-group-field"  type="search" placeholder="City">
+        <input id="city-input" class="input-group-field"  type="search" placeholder="City" required pattern="A-Za-z">
       </div>
   
       <div class="input-group">
         <span class="input-group-label">
           <i class="fa fa-map"></i>
         </span>
-        <input id="state-input" class="input-group-field"  type="search" placeholder="State">
+        <input id="state-input" class="input-group-field"  type="search" placeholder="State" required pattern="A-Za-z">
       </div>
 
       <div class="input-group">
             <span class="input-group-label">
               <i class="fa fa-map"></i>
             </span>
-            <input id="country-input" class="input-group-field"  type="search" placeholder="Country">
+            <input id="country-input" class="input-group-field"  type="search" placeholder="Country" required pattern="A-Za-z">
           </div>
 
     </div>
@@ -81,69 +77,105 @@
             
     <button class="button" id='event-search'>Find my event!</button>
     </div>
-    <br><br><br><br>
+    <br><br>
   </form>
 
+  <hr class="bottomHR">
+<p class="apiEvent">Your Event(s)</p>
+  <hr>
 <br><br>
-  
-  <div id="pw-div"></div>
-  <div id="weather-div"></div>
   <div id="venue-div"></div>
- 
+<br>
+<p class="apiParking">Nearby Parking</p>
+<hr>
+<br>
+  <div id="pw-div"></div>
+<br>
+<p class="apiWeather">The Weather</p>
+<hr>
+<br>
+  <div id="weather-div"></div>
   
-<br><br>
+<br>
+<hr class="bottomHR">
+<br>
 
-<!--Foundation XY Grid-->
+<!--Uber and lift-->
+<h1>Hail a ride</h1>
 <div class="grid-x">
-        <div class="cell large-auto"><p class="foundation"><strong>Dont' Miss Out on the Next Event</strong>. <br>
+        <div class="cell large-auto"><p class="foundation"></div>
+     
+        <div class="cell large-auto" id="rides"><p><a href="https://account.lyft.com/auth?v=ride&next=https%3A%2F%2Fride.lyft.com%2Fu%3Fid%3Dlyft%26partner%3DYOUR_CLIENT_IDl" target="blank"><img src="assets/images/lyft.png" alt="Lyft" style="width:100px;"></a>&nbsp &nbsp &nbsp &nbsp &nbsp<a href="https://m.uber.com/looking" target="blank"><img src="assets/images/uber.png" alt="Uber" style="width:100px;"></a>&nbsp &nbsp &nbsp &nbsp &nbsp<a href="https://services.taxihail.com/MearsTaxi/" target="blank"><img src="assets/images/mears.png" alt="mears" style="width:100px;"></p></a></div>
+      
+        <div class="cell large-auto"><p class="foundation"></div>
+</div>
+
+<br>
+<hr class="bottomHR">
+<br>
+  
+  <div class="cell large-auto"><p class="foundation"><strong>Dont' Miss Out on the Next Event</strong>. <br>
         <br> The one stop shop for events. Know all the events taking place in your town. Plan ahead and get the best deals<br> 
         <br> </p></div>
        
         <div class="cell large-auto"><a href="https://foundation.zurb.com/"><p class="yeti"><img src="assets/images/soccer7.jpg" alt="venue" style="width:450px;height:330px;">
         </p></a></div>
+<!--Foundation XY Grid-->
+<div class="grid-x">
+                   
+                   
+
+        <div class="cell large-auto"><p class="foundation"><img src="assets/images/zurb-foundation.png" alt="Zurb Foundation"></p></div>
         
-      </div>
-<br>
-<!--Foundation Orbit Carousel   
-<div class="row">
-        <div class="columns">
-          <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
-            <ul class="orbit-container">
-              <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
-              <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
-              <li class="orbit-slide">
-                <img class="orbit-image" src="assets/images/zurb-foundation.png" alt="Space">
-                <figcaption class="orbit-caption">Foundation Framework</figcaption>
-              </li>
-              <li class="is-active orbit-slide">
-                <img class="orbit-image" src="assets/images/zurb-yeti.png" alt="Space">
-                <figcaption class="orbit-caption">Foundation for sites</figcaption>
-              </li>
-              <li class="orbit-slide">
-                <img class="orbit-image" src="assets/images/apps-yeti.svg" alt="Space">
-                <figcaption class="orbit-caption">Foundation for apps</figcaption>
-              </li>
-              <li class="orbit-slide">
-                <img class="orbit-image" src="assets/images/inky-email.svg" alt="Space">
-                <figcaption class="orbit-caption">Foundation for email</figcaption>
-              </li>
-            </ul>
-            <nav class="orbit-bullets">
-              <button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span></button>
-              <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
-              <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
-              <button data-slide="3"><span class="show-for-sr">Fourth slide details.</span></button>
-            </nav>
-          </div>
+        <div class="cell large-auto">       
+        <p class="foundation"><strong>This web app is styled with Foundation by Zurb</strong> <br>
+        <br>A framework for any device, medium, and accessibility, Foundation is a family of responsive front-end frameworks that make it easy to design beautiful responsive websites, apps and emails that look amazing on any device.<br> 
+        <br>Foundation is semantic, readable, flexible, and completely customizable. The Yeti, Snowman, and Squid are constantly adding new resources and code snippets to help get you started! ;)</p></div>
+        
+        <div class="cell large-auto"><!-- Slideshow container --> 
+                    
+                    <div class="slideshow-container">
+                    
+                    <div class="mySlides fade">
+                      
+                      <a href="https://foundation.zurb.com/sites.html" target="blank"><img src="assets/images/zurb-yeti-computer.png" style="width:100%"></a>
+                      <div class="text">Foundation for sites</div>                      
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      
+                      <a href="https://foundation.zurb.com/apps.html" target="blank"><img src="assets/images/apps-yeti-computer.png" style="width:100%"></a>
+                      <div class="text">Foundation for apps</div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      
+                      <a href="https://foundation.zurb.com/emails.html" target="blank"><img src="assets/images/inky-computer.svg" style="width:100%"></a>
+                      <div class="text">Foundation for email</div>
+                    </div>
+                    
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    
+                    </div>
+                    <br>
+                    
+                    <div style="text-align:center">
+                      <span class="dot" onclick="currentSlide(1)"></span> 
+                      <span class="dot" onclick="currentSlide(2)"></span> 
+                      <span class="dot" onclick="currentSlide(3)"></span> 
+                    </div>
+                
         </div>
-      </div>
--->     
-<br>   
+        
+</div>
+
+
 <a href="#top" class="topButton">
     <div><p>⬆︎</p></div></a>
 <br><br>
-
 <br><br>
+
 <footer>
     
     <div class="mobile-bottom-bar">
@@ -164,6 +196,12 @@
             <i class="fa fa-bold"></i> <span class='footer-text'>Google Fonts</span>
           </a>
       </div>
+
+    <div class="mobile-bottom-bar">
+      <a href="https://github.com/" class="footer-link">
+        <i class="fa fa-github"></i> <span class='footer-text'>Github</span>
+        </a>
+    </div>
     
     <div class="mobile-bottom-bar">
         
@@ -173,45 +211,53 @@
         <a href="https://www.javascript.com/" class="footer-link">
             <i class="fa fa-wrench"></i> <span class='footer-text'>Javascript</span>
           </a>
+          <a href="https://learn.jquery.com/" class="footer-link">
+            <i class="fa fa-dollar"></i> <span class='footer-text'>jQuery</span>
+          </a>
         <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3#" class="footer-link">
             <i class="fa fa-css3"></i> <span class='footer-text'>CSS3</span>
           </a>
-        <a href="https://github.com/" class="footer-link">
-            <i class="fa fa-github"></i> <span class='footer-text'>Github</span>
-        </a>
+        
       </div>
       <div class="mobile-bottom-bar">
             <p class="footerCopyright">Copyright 2019: UCF Fall 19 Bootcamp Group 3</p>
         </div>
 </footer>
 
-  <script>
-        $(document).ready(function(){
-          // Add smooth scrolling to all links
-          $("a").on('click', function(event) {
+<script src="Javascript/logic.js"></script>
+
+
+ 
+<!--Slideshow Script-->
+                    
+<script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
         
-            // Make sure this.hash has a value before overriding default behavior
-            if (this.hash !== "") {
-              // Prevent default anchor click behavior
-              event.preventDefault();
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
         
-              // Store hash
-              var hash = this.hash;
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
         
-              // Using jQuery's animate() method to add smooth page scroll
-              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-              $('html, body').animate({
-                scrollTop: $(hash).offset().top
-              }, 800, function(){
-           
-                // Add hash (#) to URL when done scrolling (default click behavior)
-                window.location.hash = hash;
-              });
-            } // End if
-          });
-        });
-    </script>
-  <script src="assets/javascript/carousel.js"></script> 
-  <script src="Javascript/logic.js"></script>
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+</script>
+
 </body>
 </html>
