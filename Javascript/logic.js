@@ -24,30 +24,14 @@ $(document).ready(function(){
         let genre = $('<h3>').text('Genre: ' + response._embedded.events[events].classifications[0].genre.name);
         let date = $('<h3>').text('Start date: ' + response._embedded.events[events].dates.start.localDate);
         let time = $('<h3>').text('Start time: ' + response._embedded.events[events].dates.start.localTime);
-        let tickets = $("<a>").attr('href', response._embedded.events[events].url).text('Buy your tickets here!');
+        let tickets = $("<a>").attr('href', response._embedded.events[events].url).text('Get your tickets!');
         tickets.attr("target", "_blank")
         let venue = $('<h5>').text('Venue: ' + response._embedded.events[events]._embedded.venues[0].name);
 
         $('#venue-div').append(image, eventName, genre, date, time, tickets, venue);
         
       }
-      let lat = (response._embedded.events[0]._embedded.venues[0].location.latitude);
-        let long = (response._embedded.events[0]._embedded.venues[0].location.longitude);
-      console.log(lat);
-        console.log(long);
-
-        let pwQuery = 'http://api.parkwhiz.com/venue/search/?lat=' + lat + '&' + 'lng=' + long + '&key=25806fb1af4b9b6fe2518cce0470c0218664f834';
-      console.log(pwQuery);
-        $.ajax({
-          url: pwQuery,
-          method: 'GET'
-        }).then(function(response){
-          console.log(response);
-    
-          let pwUrl = $("<a target = _blank>").attr('href', response.parkwhiz_url).text('See parking near you')
-    
-          $('#pw-div').append(pwUrl);
-        })
+      
 
     })
     
@@ -60,7 +44,7 @@ $(document).ready(function(){
 
       let temp = 1.8*(response.main.temp - 273) + 32;
       let name = $('<h2>').text(response.name);
-      let farenheit = $('<h4>').text(temp.toFixed(0) + 'F°');
+      let farenheit = $('<h4>').text(temp.toFixed(0) + '°F');
       let condition = $('<h4>').text('Outlook: ' + response.weather[0].main);
 
       $('#weather-div').append(name, farenheit, condition);
@@ -136,11 +120,3 @@ $(document).ready(function(){
           slides[slideIndex-1].style.display = "block";  
           dots[slideIndex-1].className += " active";
         }
-
-
- 
-  
-
-
-  
- 
