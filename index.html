@@ -7,7 +7,7 @@
 
     <title>Entertainment Event App</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">  
@@ -25,13 +25,13 @@
 <div class="marketing-site-hero" id="top">
   
         <div class="marketing-site-hero-content">
-        <br><br>
+        
           <h1 class="heading1Text"></h1>
-        <br>
+        
             
          <p class="subheader"></p>
           
-          <br>   
+           
           <a href="#jump" class="round button">Get started</a>
           
         </div>
@@ -48,21 +48,21 @@
         <span class="input-group-label">
           <i class="fa fa-search" aria-hidden="true"></i>
         </span>
-        <input id="name-input" class="input-group-field"  type="search" placeholder="My Event">
+        <input id="name-input" class="input-group-field"  type="search" placeholder="*My Event">
       </div>
   
       <div class="input-group">
         <span class="input-group-label">
           <i class="fa fa-map" aria-hidden="true"></i>
         </span>
-        <input id="city-input" class="input-group-field"  type="search" placeholder="City" required pattern="A-Za-z">
+        <input id="city-input" class="input-group-field"  type="search" placeholder="*City" required pattern="A-Za-z">
       </div>
   
       <div class="input-group">
         <span class="input-group-label">
           <i class="fa fa-map"></i>
         </span>
-        <input id="state-input" class="input-group-field"  type="search" placeholder="State" required pattern="A-Za-z">
+        <input id="state-input" class="input-group-field"  type="search" placeholder="*State" required pattern="A-Za-z">
       </div>
 
       <div class="input-group">
@@ -74,31 +74,30 @@
 
     </div>
     <div class="button-container">
-            
+          
     <button class="button" id='event-search'>Find my event!</button>
     </div>
-    <br><br>
+    
   </form>
 
-  <hr class="bottomHR">
 <p class="apiEvent">Your Event(s)</p>
   <hr>
-<br><br>
+
   <div id="venue-div"></div>
-<br>
+
 <p class="apiParking">Nearby Parking</p>
 <hr>
-<br>
+
   <div id="pw-div"></div>
-<br>
+
 <p class="apiWeather">The Weather</p>
-<hr>
-<br>
+
+
   <div id="weather-div"></div>
   
-<br>
+
 <hr class="bottomHR">
-<br>
+
 
 <!--Uber and lift-->
 <h1>Hail a ride</h1>
@@ -110,16 +109,21 @@
         <div class="cell large-auto"><p class="foundation"></div>
 </div>
 
-<br>
+
 <hr class="bottomHR">
-<br>
-  
-  <div class="cell large-auto"><p class="foundation"><strong>Dont' Miss Out on the Next Event</strong>. <br>
-        <br> The one stop shop for events. Know all the events taking place in your town. Plan ahead and get the best deals<br> 
-        <br> </p></div>
+
+ <!--Foundation XY Grid-->
+<div class="grid-x"> 
+  <div class="cell large-auto"><p class="foundation"><strong>Dont' Miss Out on the Next Big Event!</strong> </p>
+        <p class="foundation">This web application is your one stop shop for important information. Research the ticketable events taking place near you or for an upcoming trip. Whether it's a game or concert get the details you need. Plan ahead for a fun worry free time.
+        </p></div>
        
         <div class="cell large-auto"><a href="https://foundation.zurb.com/"><p class="yeti"><img src="assets/images/soccer7.jpg" alt="venue" style="width:450px;height:330px;">
         </p></a></div>
+</div>
+
+<hr class="bottomHR">
+
 <!--Foundation XY Grid-->
 <div class="grid-x">
                    
@@ -128,9 +132,9 @@
         <div class="cell large-auto"><p class="foundation"><img src="assets/images/zurb-foundation.png" alt="Zurb Foundation"></p></div>
         
         <div class="cell large-auto">       
-        <p class="foundation"><strong>This web app is styled with Foundation by Zurb</strong> <br>
-        <br>A framework for any device, medium, and accessibility, Foundation is a family of responsive front-end frameworks that make it easy to design beautiful responsive websites, apps and emails that look amazing on any device.<br> 
-        <br>Foundation is semantic, readable, flexible, and completely customizable. The Yeti, Snowman, and Squid are constantly adding new resources and code snippets to help get you started! ;)</p></div>
+        <p class="foundation"><strong>This web app is styled with Foundation by Zurb</strong> </p>
+        <p class="foundation">A framework for any device, medium, and accessibility, Foundation is a family of responsive front-end frameworks that make it easy to design beautiful responsive websites, apps and emails that look amazing on any device.</p> 
+        <p class="foundation">Foundation is semantic, readable, flexible, and completely customizable. The Yeti, Snowman, and Squid are constantly adding new resources and code snippets to help get you started! ;)</p></div>
         
         <div class="cell large-auto"><!-- Slideshow container --> 
                     
@@ -158,7 +162,7 @@
                     <a class="next" onclick="plusSlides(1)">&#10095;</a>
                     
                     </div>
-                    <br>
+                    
                     
                     <div style="text-align:center">
                       <span class="dot" onclick="currentSlide(1)"></span> 
@@ -172,9 +176,7 @@
 
 
 <a href="#top" class="topButton">
-    <div><p>⬆︎</p></div></a>
-<br><br>
-<br><br>
+    <div><p class="fa fa-arrow-up"></p></div></a>
 
 <footer>
     
@@ -226,38 +228,6 @@
 
 <script src="Javascript/logic.js"></script>
 
-
- 
-<!--Slideshow Script-->
-                    
-<script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
-        
-        function plusSlides(n) {
-          showSlides(slideIndex += n);
-        }
-        
-        function currentSlide(n) {
-          showSlides(slideIndex = n);
-        }
-        
-        function showSlides(n) {
-          var i;
-          var slides = document.getElementsByClassName("mySlides");
-          var dots = document.getElementsByClassName("dot");
-          if (n > slides.length) {slideIndex = 1}    
-          if (n < 1) {slideIndex = slides.length}
-          for (i = 0; i < slides.length; i++) {
-              slides[i].style.display = "none";  
-          }
-          for (i = 0; i < dots.length; i++) {
-              dots[i].className = dots[i].className.replace(" active", "");
-          }
-          slides[slideIndex-1].style.display = "block";  
-          dots[slideIndex-1].className += " active";
-        }
-</script>
 
 </body>
 </html>

@@ -53,7 +53,7 @@ $(document).ready(function(){
     
     //Openweather API call to get city name, temperature, and weather condition
     $.ajax({
-      url: 'https://api.openweathermap.org/data/2.5/weather?q=' + city + ',' + country + '&appid=166a433c57516f51dfab1f7edaed8413',
+      url: 'https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=166a433c57516f51dfab1f7edaed8413',
       method: 'GET'
     }).then(function(response){
       console.log(response);
@@ -108,7 +108,7 @@ $(document).ready(function(){
 
 
 
-  /*Foundation Section Slider
+  /*Foundation Section Slider*/
 
   var slideIndex = 1;
         showSlides(slideIndex);
@@ -136,7 +136,7 @@ $(document).ready(function(){
           slides[slideIndex-1].style.display = "block";  
           dots[slideIndex-1].className += " active";
         }
-*/
+
 
  
   
