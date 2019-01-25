@@ -1,9 +1,7 @@
 /*Foundation Header Option*/
 
 body {
-
   font-family: 'Poppins';
-  
  }
 
 .marketing-site-hero {
@@ -40,15 +38,11 @@ body {
   color: #e9e9e9 !important;
   font-weight: bolder;
   text-align: center;
-  margin-top: 0%
-  
-  
-
+  margin-top: 0% 
 }
 
 /* paragraph*/
 .marketing-site-hero-content p {
-
   font-size: 20px;
   color: #e9e9e9;
   font-weight: bolder;
@@ -57,8 +51,7 @@ body {
 /* get started button*/
 .marketing-site-hero-content .button.round {
   background-color: #33cccc;
-    color: white;
-    
+    color: white; 
   border-radius: 5000px;
   text-transform: uppercase;
   font-size: 22px;
@@ -93,7 +86,6 @@ body {
   margin-top: 80px;
 }
 
-
 /*Foundation Responsive Form*/
 form {
   border: 8px solid black;
@@ -105,13 +97,11 @@ form .form-icons {
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
-    
+    width: 50%;  
   }
   
   form .form-icons h4 {
-    margin-bottom: 1rem;
-    
+    margin-bottom: 1rem;   
   }
   
   form .form-icons .input-group-label {
@@ -140,8 +130,7 @@ form .form-icons {
     height: 60px;
     margin: 0 auto;
     border-radius: 5000px;
-    text-transform: uppercase;
-   
+    text-transform: uppercase;  
   }
     
   form .button:hover { 
@@ -166,11 +155,6 @@ form .form-icons {
     font-size: 22px;
   }
 
-  .apiParking {
-    text-align: center;
-    font-size: 22px;
-  }
-
   .apiWeather {
     text-align: center;
     font-size: 22px;
@@ -180,10 +164,6 @@ form .form-icons {
     margin-left: 60px;
     margin-top: 30px;
     margin-bottom: 30px;
-  }
-
-  #pw-div {
-    margin-left: 60px;
   }
 
   #weather-div {
@@ -224,7 +204,6 @@ form .form-icons {
   
   @media screen and (max-width: 640px) {
     .responsive-card-table {
-      
     }
     .responsive-card-table thead tr {
       position: absolute;
@@ -273,7 +252,6 @@ form .form-icons {
       top: 1px;
       z-index: 0;
     }
-
   }
 
   h1 {
@@ -322,12 +300,10 @@ form .form-icons {
   
   font-family: 'Poppins';
   font-weight: 300;
-
 }
 
 .yeti {
-  text-align: center;
-  
+  text-align: center;  
 }
 
 /*Foundation Slider*/                   
@@ -434,17 +410,13 @@ form .form-icons {
 
   .topButton {
   font-size: 32px;
-  border-radius: 5000px;
-  
-  
+  border-radius: 5000px; 
   color: #33cccc;
   background-color: #181717;
   text-transform: uppercase;
-
   text-align: center;
   width: 50px;
-  height: 50px;
-  
+  height: 50px; 
   left: 50%;
   margin-left: -25px;
   margin-top: 30px;
@@ -454,14 +426,12 @@ form .form-icons {
 .topButton:hover {
   font-size: 32px;
   border-radius: 5000px;
-  
   color: #FF5475;
   background-color: #33cccc;
   text-transform: uppercase;
   text-align: center;
   width: 50px;
   height: 50px;
-  
   left: 50%;
   margin-left: -25px;
   margin-top: 30px;
@@ -483,8 +453,7 @@ form .form-icons {
           justify-content: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
-          align-items: center;
-  
+          align-items: center; 
 }
 
 .mobile-bottom-bar .footer-link {
@@ -523,8 +492,7 @@ form .form-icons {
   top: 2px;
   font-weight: bold;
   font-size: 16px;
-  color: #e9e9e9;
- 
+  color: #e9e9e9; 
 }
 
 .footerCopyright {
@@ -536,20 +504,16 @@ form .form-icons {
 }
 .heading1Text {
   font-family: 'Playfair Display', serif !important;
-  
-
 }
 .subheader {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   color: #181717;
-  
 }
 #jump {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   color: #33cccc;
-
 }
 
 ::-webkit-input-placeholder {
