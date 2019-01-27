@@ -30,8 +30,7 @@ $(document).ready(function(){
 
         $('#venue-div').append(image, eventName, genre, date, time, tickets, venue);
         
-      }
-      
+      } 
 
     })
     
